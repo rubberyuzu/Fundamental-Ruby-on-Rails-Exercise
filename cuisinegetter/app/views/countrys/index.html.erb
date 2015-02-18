@@ -1,2 +1,6 @@
 <h1>countys#index</h1>
 <h1>index of countries</h1>
+
+<%= @countrys.each do |country| %>
+	<li><%= country.title %></li>
+<% end %>

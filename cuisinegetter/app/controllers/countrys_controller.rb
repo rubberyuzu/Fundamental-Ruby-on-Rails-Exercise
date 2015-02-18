@@ -1,9 +1,10 @@
 class CountrysController < ApplicationController
 	def index
+		@countrys = Country.all
 	end
 
 	def show
-		@countrys = Country.all
+		@country = Country.find_by_id(params[:id])
 	end
 
 	def new
