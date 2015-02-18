@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
-  resources :countrys
+  resources :countrys do
+    resources :citys do 
+      resources :cuisines
+    end
+  end
+
 
   get 'welcome/index'
   root 'welcome#index'
