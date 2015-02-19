@@ -1,6 +1,6 @@
 class CuisinesController < ApplicationController
 	def index
-		@cuisines = Cuisine.all
+		@cuisines = Cuisine.where("country_id = ? AND city_id = ?", params[:country_id], params[:city_id])
 	end
 
 	def show
@@ -15,5 +15,4 @@ class CuisinesController < ApplicationController
 		@cuisine.save
 		redirect_to @cuisine
 	end
-
 end
