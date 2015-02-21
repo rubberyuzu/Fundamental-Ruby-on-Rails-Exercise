@@ -12,6 +12,7 @@ class CountrysController < ApplicationController
 
 	def create
 		@country = Country.new(params[:country])
+		
 		@coutry.save
 		redirect_to @country
 	end

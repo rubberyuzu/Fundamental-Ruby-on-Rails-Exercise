@@ -1,0 +1,11 @@
+<h1>Add a New Country!</h1>
+
+<%= form_for :country do |f| %>
+	<p>
+		<%= f.label :title %> <br>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
